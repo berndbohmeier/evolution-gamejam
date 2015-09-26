@@ -1,0 +1,23 @@
+//black screen
+Hidden in a small asteroid field a space station holds the last homo sapien sapiens.
+//cut to space station super epic Lens flares
+//green alien pod slams into space station starting a fire at the base
+// cut to inside the space station MC standing in middle of screen
+// the MC has an ! appear over her head
+//Gameplay kicks in, you can go left or right or...whatever
+//walks to ship main deck and it's empty
+MC:empty... Where is everyone?
+//make clickable computer
+CPU:Alert Hull damage critical, oxygen in rooms a8,a10 depleted, Hull Damage contained
+//If you click again
+CPU: Lifeforms Detected 1 MC, unknown beings also detected
+MC:That Can't be right.
+//do more arbitrary tasks while moving closer toward the pod landing
+//obv need oxy suit to get to pod landing area
+pod landing 
+//pod room looks totally fine
+MC:Where's the Damage?
+//pod sits in middle
+//on walking up to the pod
+//pod opens
+END
