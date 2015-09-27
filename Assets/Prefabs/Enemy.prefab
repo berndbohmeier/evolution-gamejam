@@ -29,6 +29,8 @@ GameObject:
   - 58: {fileID: 5899234}
   - 114: {fileID: 11440104}
   - 114: {fileID: 11443446}
+  - 58: {fileID: 5825438}
+  - 114: {fileID: 11488720}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -77,6 +79,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &5825438
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183516}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: .357631683
 --- !u!58 &5899234
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -130,6 +145,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e8c6da0560e23e4dad6acafb29f5673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11488720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50eae69320d90ae48b66a86a198e0933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21297510
