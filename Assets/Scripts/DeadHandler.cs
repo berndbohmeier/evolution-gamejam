@@ -19,6 +19,7 @@ public class DeadHandler : MonoBehaviour {
     public void Respawn()
     {
         GetComponent<Transform>().position = new Vector3(respawnPosition.x, respawnPosition.y,0);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 
     public void SetRespawn(float x, float y)
