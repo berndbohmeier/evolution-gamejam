@@ -18,8 +18,7 @@ public class KillPlayer : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player" )
         {
-            other.gameObject.GetComponent<DeadHandler>().Respawn();
-        }
+            other.gameObject.GetComponent<DeadHandler>().Respawn();        }
 
         if (other.gameObject.tag == "Enemy" && gameObject.tag!= "Enemy")
         {
