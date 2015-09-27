@@ -4,14 +4,22 @@ using System.Collections;
 public class MoveController : MonoBehaviour {
 
     public bool facingRight = true;
-    public bool jump = false;
+    //public bool jump = false;
     public float moveForce = 365f;
     public float maxSpeed = 5f;
     public float jumpForce = 1000f;
+    public float wallForce;
     public Transform groundCheck;
+    public Transform leftCheck;
+    public Transform rightCheck;
+    public bool wallJump;
+    public int timesJump;
 
+    private int jumpsLeft;
 
     private bool grounded = false;
+    private bool leftGrounded = false;
+    private bool rightGrounded = false;
     private Animator anim;
     private Rigidbody2D rb2d;
 
@@ -27,6 +35,11 @@ public class MoveController : MonoBehaviour {
     void Update()
     {
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        if (wallJump)
+        {
+            leftGrounded = Physics2D.Linecast(transform.position, leftCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+            rightGrounded = Physics2D.Linecast(transform.position, rightCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        }
     }
 
     void FixedUpdate()
@@ -37,10 +50,24 @@ public class MoveController : MonoBehaviour {
     public void Jump()
     {
         //anim.SetTrigger("Jump");
-        if (grounded)
+        if (grounded || rightGrounded || leftGrounded)
         {
             rb2d.AddForce(new Vector2(0f, jumpForce));
-            jump = false;
+            jumpsLeft = timesJump-1;
+            if (leftGrounded)
+            {
+                rb2d.AddForce(new Vector2(wallForce, 0));
+            }
+            if (rightGrounded)
+            {
+                rb2d.AddForce(new Vector2(-wallForce, 0));
+            }
+        }
+        else if (jumpsLeft > 0)
+        {
+            rb2d.velocity = new Vector2 (rb2d.velocity.x, 0);
+            rb2d.AddForce(new Vector2(0f, jumpForce));
+            jumpsLeft--;
         }
         
     }
@@ -48,6 +75,10 @@ public class MoveController : MonoBehaviour {
     public void Move(float h)
     {
         //anim.SetFloat("Speed", Mathf.Abs(h));
+
+        if(leftGrounded && h < 0){
+            h = 0;
+        }
 
         if (h * rb2d.velocity.x < maxSpeed)
             rb2d.AddForce(Vector2.right * h * moveForce);

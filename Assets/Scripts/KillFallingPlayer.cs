@@ -10,7 +10,7 @@ public class KillFallingPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.y < -6)
+        if (myTransform.position.y < -6)
         {
             GetComponent<DeadHandler>().Respawn();
         }
