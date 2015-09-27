@@ -21,7 +21,7 @@ public class KillPlayer : MonoBehaviour {
             Application.LoadLevel(0);
         }
 
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" && gameObject.tag!= "Enemy")
         {
             Destroy(other.gameObject);
         }
