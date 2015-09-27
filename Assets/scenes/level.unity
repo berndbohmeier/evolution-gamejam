@@ -1448,6 +1448,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 21290782, guid: f4fd73059f4d3bb409d7079031acca78, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ab8aed4d9b4bd47d7ab4f03388859781,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4fd73059f4d3bb409d7079031acca78, type: 2}
   m_IsPrefabParent: 0
@@ -13112,7 +13117,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .514705896, g: .359537214, b: .426955312, a: .0196078438}
+  m_BackGroundColor: {r: .260056227, g: .544117689, b: .273769587, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -13123,7 +13128,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18671,7 +18676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22496136, guid: a5f3b602b9078b2459cdd7c5d0acd392, type: 2}
       propertyPath: m_RootOrder
-      value: 99
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 22496136, guid: a5f3b602b9078b2459cdd7c5d0acd392, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -34455,7 +34460,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22499700, guid: e7fd578d712206540bb4f5248c596ac1, type: 2}
       propertyPath: m_RootOrder
-      value: 152
+      value: 154
       objectReference: {fileID: 0}
     - target: {fileID: 22499700, guid: e7fd578d712206540bb4f5248c596ac1, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -40086,7 +40091,7 @@ Transform:
   - {fileID: 1165259209}
   - {fileID: 97093139}
   m_Father: {fileID: 0}
-  m_RootOrder: 143
+  m_RootOrder: 144
 --- !u!1001 &1826054496
 Prefab:
   m_ObjectHideFlags: 0
