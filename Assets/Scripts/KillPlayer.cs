@@ -16,9 +16,14 @@ public class KillPlayer : MonoBehaviour {
 
     void OnTriggerEnter2D (Collider2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" )
         {
             Application.LoadLevel(0);
+        }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
         }
         
     }
