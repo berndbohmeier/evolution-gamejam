@@ -12,7 +12,7 @@ public class KillFallingPlayer : MonoBehaviour {
 	void Update () {
         if (transform.position.y < -6)
         {
-            Application.LoadLevel(0);
+            GetComponent<DeadHandler>().Respawn();
         }
 	}
 }
